@@ -5,6 +5,7 @@ public abstract class Vehicle {
     private String model;
     private Engine engine;
     protected int numberOfPassengers;
+    protected int distanceTraveled;
     protected boolean isOn;
 
     public Vehicle(String make, String model, Engine engine){
@@ -12,7 +13,9 @@ public abstract class Vehicle {
         this.model = model;
         this.engine = engine;
         numberOfPassengers = 0;
+        distanceTraveled = 0;
         isOn = false;
+
     }
 
     public abstract void start();
@@ -21,9 +24,11 @@ public abstract class Vehicle {
 
     public abstract void removePassengers(int numberOfPassengers);
 
+    public abstract void drive(int distance);
+
 
 
     public String toString(){
-        return "* Make: " + make + " * Model: " + model + " * Number of Passengers: " + numberOfPassengers + " * Engine On? " + isOn;
+        return "* Make: " + make + " * Model: " + model + " * Number of Passengers: " + numberOfPassengers + " * Engine On? " + isOn + " * Odometer: " + distanceTraveled;
     }
 }

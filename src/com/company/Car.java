@@ -21,4 +21,8 @@ public class Car extends Vehicle {
     public void removePassengers(int numberOfPassengers){
         this.numberOfPassengers -= numberOfPassengers;
     }
+
+    public void drive(int distance){
+        distanceTraveled += distance;
+    }
 }

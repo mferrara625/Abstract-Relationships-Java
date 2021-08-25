@@ -15,6 +15,9 @@ public class Main {
         car.start();                              // STARTS CAR
         System.out.println(car);
         System.out.println(lineBreak);
+        car.drive(50);                     // DRIVES CAR 50 MILES
+        System.out.println(car);
+        System.out.println(lineBreak);
         car.removePassengers(1);  // REMOVES ONE PASSENGER
         System.out.println(car);
     }
