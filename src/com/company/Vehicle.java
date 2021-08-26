@@ -20,6 +20,8 @@ public abstract class Vehicle {
 
     public abstract void start();
 
+    public abstract void stop();
+
     public abstract void addPassengers(int numberOfPassengers);
 
     public abstract void removePassengers(int numberOfPassengers);

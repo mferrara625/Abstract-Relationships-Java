@@ -14,6 +14,10 @@ public class Car extends Vehicle {
         isOn = true;
     }
 
+    public void stop(){
+        isOn = false;
+    }
+
     public void addPassengers(int numberOfPassengers){
         this.numberOfPassengers += numberOfPassengers;
     }
