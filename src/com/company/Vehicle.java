@@ -3,18 +3,21 @@ package com.company;
 public abstract class Vehicle {
     private String make;
     private String model;
-    private Engine engine;
+    protected Engine engine;
     protected int numberOfPassengers;
     protected int distanceTraveled;
-    protected boolean isOn;
+    protected int maxSpeed;
+    protected int maxPassengers;
 
-    public Vehicle(String make, String model, Engine engine){
+    public Vehicle(String make, String model, Engine engine, int maxSpeed, int maxPassengers){
         this.make = make;
         this.model = model;
         this.engine = engine;
+        this.maxSpeed = maxSpeed;
+        this.maxPassengers = maxPassengers;
         numberOfPassengers = 0;
         distanceTraveled = 0;
-        isOn = false;
+        engine.isOn = false;
 
     }
 
@@ -31,6 +34,6 @@ public abstract class Vehicle {
 
 
     public String toString(){
-        return "* Make: " + make + " * Model: " + model + " * Number of Passengers: " + numberOfPassengers + " * Engine On? " + isOn + " * Odometer: " + distanceTraveled;
+        return "* Make: " + make + " * Model: " + model + " * Number of Passengers: " + numberOfPassengers + " * Engine On? " + engine.isOn + " * Speed: " + Math.abs(Contents.xV) + " * Odometer: " + distanceTraveled;
     }
 }

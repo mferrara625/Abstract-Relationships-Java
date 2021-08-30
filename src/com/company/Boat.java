@@ -1,41 +1,37 @@
 package com.company;
 
-public class Car extends Vehicle {
-
-    private int numberOfDoors;
-    protected String hornSound;
-
-
-    public Car(String make, String model, Engine engine, int numberOfDoors, int maxSpeed, int maxPassengers, String hornSound) {
+public class Boat extends Vehicle{
+    public Boat(String make, String model, Engine engine, int maxSpeed, int maxPassengers) {
         super(make, model, engine, maxSpeed, maxPassengers);
-        this.numberOfDoors = numberOfDoors;
-        this.numberOfPassengers = 0;
-        this.hornSound = hornSound;
-
-
     }
 
+    @Override
     public void start(){
         engine.isOn = true;
     }
 
+
+    @Override
     public void stop(){
         engine.isOn = false;
     }
 
+
+    @Override
     public void addPassengers(int numberOfPassengers){
         this.numberOfPassengers += numberOfPassengers;
     }
 
+
+    @Override
     public void removePassengers(int numberOfPassengers){
         this.numberOfPassengers -= numberOfPassengers;
     }
 
+
+    @Override
     public void drive(int distance){
         distanceTraveled += distance;
     }
 
-    public void beepHorn(){
-        System.out.println(hornSound);
-    }
 }
